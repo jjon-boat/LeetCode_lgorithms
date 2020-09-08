@@ -39,8 +39,8 @@ class Solution:
             for i in range(tmp_length):
                 if len(remain_list[i+1:])>=remain_num-1:  # 剪枝，能大大提升运行效率
                     recursion(remain_list[i+1:], remain_num-1, prefix+[remain_list[i]])
+                    # prefix+[remain_list[i]] :list+list = list连接
                 else: break
-
 
         nums = list(range(1,n+1))
         result = []
